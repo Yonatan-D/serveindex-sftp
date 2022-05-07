@@ -1,0 +1,16 @@
+{
+  "name": "serveindex-sftp",
+  "version": "0.1.0",
+  "description": "serve-index with sftp server",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.1",
+    "minimist": "^1.2.6",
+    "serve-index": "^1.9.1"
+  },
+  "scripts": {
+    "start": "node src/app.js --port=80"
+  },
+  "author": "yonatan",
+  "license": "MIT"
+}
