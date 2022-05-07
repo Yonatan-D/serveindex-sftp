@@ -1,6 +1,7 @@
 const express    = require('express')
 const serveIndex = require('serve-index')
-const { port=80, user='test', dir='upload' } = require('minimist')(process.argv.slice(2))
+const { port=80, args } = require('minimist')(process.argv.slice(2))
+const [ user, pass, uid, gid, dir ] = args.split(':')
 
 const app = express()
 

@@ -92,6 +92,7 @@ fi
 
 if $startSshd; then
     log "Executing sshd"
+    nohup node /app/src/app.js --args=$1 > out.log 2>&1 &
     exec /usr/sbin/sshd -D -e
 else
     log "Executing $*"

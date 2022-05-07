@@ -111,5 +111,3 @@ if [ -n "$dir" ]; then
         fi
     done
 fi
-
-nohup node /app/src/app.js --user=${user} --dir=${dir} > out.log 2>&1 &
