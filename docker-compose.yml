@@ -1,0 +1,11 @@
+services:
+  serveindex-sftp:
+    container_name: serveindex-sftp
+    image: serveindex-sftp
+    restart: always
+    ports:
+      - 9022:22
+      - 9080:80
+    volumes:
+      - /home/docs:/home/docs
+    command: docs:123:::files

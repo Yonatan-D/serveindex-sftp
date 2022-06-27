@@ -2,12 +2,16 @@
 
 atmoz/sftp 镜像的基础上增加 serve-index 应用, 满足自己使用 sftp 上传文件, 网页浏览器查看下载文件
 
-
-
 ## 构建
 
 ```bash
 docker build -t serveindex-sftp .
+```
+
+## 开始
+
+```bash
+docker-compose up -d
 ```
 
 ## 使用
@@ -33,8 +37,6 @@ docker run --name <容器名称> \
 ```bash
 docker run --name serveindex-sftp --restart always -v /home/docs:/home/docs -p 9080:80 -p 9022:22 -d serveindex-sftp docs:123:::files
 ```
-
-
 
 ## 感谢
 
