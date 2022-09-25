@@ -1,45 +1,35 @@
 # serveindex-sftp
 
-atmoz/sftp 镜像的基础上增加 serve-index 应用, 满足自己使用 sftp 上传文件, 网页浏览器查看下载文件
+Use SFTP to upload files, and the Internet browser to download files
 
-## 构建
-
-```bash
-docker build -t serveindex-sftp .
-```
-
-## 开始
+## Usage
 
 ```bash
-docker-compose up -d
+docker run \
+    --name=serveindex-sftp \
+    --restart=always \
+    -p 9022:22 \
+    -p 9080:80 \
+    -e SS_ARGS=test:123:::files \
+    -dt serveindex-sftp:1.0
 ```
 
-## 使用
+download： http://localhost:9080/
+
+upload：sftp://localhost:9022  username: test  password: 123
+
+file path: /home/test/files
+
+## Build
 
 ```bash
-docker run --name <容器名称> \
-  --restart always
-  -v <宿主机目录>:/home/<用户名>/ \
-  -p <宿主机web端口>:80 \
-  -p <宿主机sftp端口>:22 \
-  -d serveindex-sftp:<版本> \
-  <用户名>:<密码>:::<目录>
+# build
+$ docker build -t serveindex-sftp .
+# run
+$ docker-compose up -d
 ```
 
-## 示例
-
-> 浏览器访问： http://localhost:9080/
->
-> FTP工具访问：sftp://localhost:9022  用户名: docs  密码: 123
->
-> 文件映射在宿主机的 `/home/docs/files` 目录下
-
-```bash
-docker run --name serveindex-sftp --restart always -v /home/docs:/home/docs -p 9080:80 -p 9022:22 -d serveindex-sftp docs:123:::files
-```
-
-## 感谢
+## Thank
 
 - [atmoz/sftp](https://github.com/atmoz/sftp)
 - [expressjs/serve-index](https://github.com/expressjs/serve-index)
-- [nodejs/docker-node](https://github.com/nodejs/docker-node)
