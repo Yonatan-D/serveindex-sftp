@@ -1,7 +1,0 @@
-docker build -f Dockerfile-alpine -t serveindex-sftp:$1 . \
-&& docker run --name ss \
--v /home/sftp:/home/test/ \
--p 9080:80 \
--p 9022:22 \
--d serveindex-sftp:$1 \
-test:123:::files

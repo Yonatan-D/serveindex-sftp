@@ -9,7 +9,7 @@
     "serve-index": "^1.9.1"
   },
   "scripts": {
-    "start": "node src/app.js --port=80"
+    "dev": "node app.js --port=80 --args=test:123:::files"
   },
   "author": "yonatan",
   "license": "MIT"

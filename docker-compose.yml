@@ -7,5 +7,5 @@ services:
       - 9022:22
       - 9080:80
     volumes:
-      - /home/docs:/home/docs
-    command: docs:123:::files
+      - /home/test:/home/test
+    command: test:123:::files

@@ -1,0 +1,8 @@
+#!/bin/bash
+docker build -f Dockerfile -t serveindex-sftp:$1 . && \
+docker run --name=ss \
+-v /home/ydtest/ss:/home/test \
+-p 9080:80 \
+-p 9022:22 \
+-e SS_ARGS=test:123:::files \
+-d serveindex-sftp:$1 \
