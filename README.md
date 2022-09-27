@@ -11,7 +11,7 @@ docker run \
     -p 9022:22 \
     -p 9080:80 \
     -e SS_ARGS=test:123:::files \
-    -dt serveindex-sftp:1.1
+    -dt yont/serveindex-sftp:1.1
 ```
 
 download： http://localhost:9080/
