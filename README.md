@@ -2,6 +2,12 @@
 
 Use SFTP to upload files, and the Internet browser to download files
 
+## Playground
+
+https://fileshare.yonatan.cn/
+
+sftp://test:123@fileshare.yonatan.cn:9022
+
 ## Usage
 
 ```bash
@@ -16,16 +22,14 @@ docker run \
 
 download： http://localhost:9080/
 
-upload：sftp://localhost:9022  username: test  password: 123
+upload：sftp://localhost:9022 (username: test , password: 123)
 
-file path: /home/test/files
+file path: /home/test/files (so you can use `-v /home/your_dir:/home/test/files`)
 
 ## Build
 
 ```bash
-# build
 $ docker build -t serveindex-sftp .
-# run
 $ docker-compose up -d
 ```
 
