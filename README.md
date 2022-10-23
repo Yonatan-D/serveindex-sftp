@@ -2,11 +2,9 @@
 
 Use SFTP to upload files, and the Internet browser to download files
 
-## Playground
+## Preview
 
-https://serveindex-sftp.yonatan.cn/
-
-sftp://test:123@fileshare.yonatan.cn:9022
+my tools download page: https://serveindex.yonatan.cn/
 
 ## Usage
 
