@@ -4,7 +4,7 @@ Use SFTP to upload files, and the Internet browser to download files
 
 ## Playground
 
-https://fileshare.yonatan.cn/
+https://serveindex-sftp.yonatan.cn/
 
 sftp://test:123@fileshare.yonatan.cn:9022
 
