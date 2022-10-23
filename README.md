@@ -4,7 +4,7 @@ Use SFTP to upload files, and the Internet browser to download files
 
 ## Preview
 
-my tools download page: https://serveindex.yonatan.cn/
+my tools download page: https://tool.yonatan.cn/
 
 ## Usage
 
