@@ -31,7 +31,7 @@ $ docker build -t serveindex-sftp .
 $ docker-compose up -d
 ```
 
-## Thank
+## Thanks
 
 - [atmoz/sftp](https://github.com/atmoz/sftp)
 - [expressjs/serve-index](https://github.com/expressjs/serve-index)
